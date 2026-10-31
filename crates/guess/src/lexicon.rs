@@ -188,18 +188,18 @@ mod tests {
     #[test]
     fn pronunciations() {
         let lines = [
-            "Ringling IT retires SMS codes for MFA on Nov 16.",
-            "Sign in at cloud.ringling.edu or mail help@ringling.edu.",
+            "Campus IT retires SMS codes for MFA on Nov 16.",
+            "Sign in at cloud.example.edu or mail help@example.edu.",
             "Nov 2-15 is the reminder window.",
             "EDIT the NASA file.",
         ];
         let say = say(&lines, &BTreeMap::new());
         let get = |k: &str| say.iter().find(|(a, _)| a == k).map(|(_, b)| b.as_str());
         assert_eq!(
-            get("cloud.ringling.edu"),
-            Some("cloud dot ringling dot E D U")
+            get("cloud.example.edu"),
+            Some("cloud dot example dot E D U")
         );
-        assert_eq!(get("help@ringling.edu"), Some("help at ringling dot E D U"));
+        assert_eq!(get("help@example.edu"), Some("help at example dot E D U"));
         assert_eq!(get("MFA"), Some("M F A"));
         assert_eq!(get("SMS"), Some("S M S"));
         assert_eq!(get("Nov "), Some("November "));
@@ -211,13 +211,13 @@ mod tests {
         // longest keys first
         assert_eq!(
             say.first().map(|(k, _)| k.as_str()),
-            Some("cloud.ringling.edu")
+            Some("cloud.example.edu")
         );
     }
 
     #[test]
     fn it_alone_is_spelled() {
-        let say = say(&["Call Ringling IT."], &BTreeMap::new());
+        let say = say(&["Call Campus IT."], &BTreeMap::new());
         assert_eq!(say, vec![("IT".to_string(), "I T".to_string())]);
     }
 }

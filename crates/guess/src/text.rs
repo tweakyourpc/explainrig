@@ -532,10 +532,10 @@ mod tests {
         );
         assert_eq!(
             speakable(
-                "Okta dashboard login (https://cloud.ringling.edu) continues to not require a second factor",
+                "Okta dashboard login (https://cloud.example.edu) continues to not require a second factor",
                 &casing
             ),
-            "Okta dashboard login at cloud.ringling.edu continues to not require a second factor."
+            "Okta dashboard login at cloud.example.edu continues to not require a second factor."
         );
     }
 
