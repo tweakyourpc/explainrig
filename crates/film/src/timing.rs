@@ -148,11 +148,10 @@ impl Timing {
                 .and_then(|s| s.as_str())
                 .unwrap_or("")
                 .to_string();
-            let audio = v.get("path").and_then(|s| s.as_str()).unwrap_or("");
-            let audio = Path::new(audio)
-                .strip_prefix(film_dir)
-                .map(|p| p.to_string_lossy().into_owned())
-                .unwrap_or_else(|_| audio.to_string());
+            let audio = film_relative(
+                film_dir,
+                v.get("path").and_then(|s| s.as_str()).unwrap_or(""),
+            );
             t.narration.push(Narration {
                 scene,
                 start: num(v, "start"),
@@ -223,6 +222,68 @@ impl Timing {
     }
 }
 
+impl Timing {
+    /// The same timing with every voice path made relative to `film_dir` (timing saved by an
+    /// older Explainrig kept Showrig's absolute paths).
+    pub fn relative_audio(mut self, film_dir: &Path) -> Timing {
+        for n in &mut self.narration {
+            n.audio = film_relative(film_dir, &n.audio);
+        }
+        self
+    }
+}
+
 fn round(x: f64) -> f64 {
     (x * 1000.0).round() / 1000.0
+}
+
+/// A voice file's path relative to the film folder, so the preview still plays after the project
+/// is moved, copied to another computer or served over HTTP. Showrig writes absolute paths (on a
+/// remote worker, paths on that worker), and its voice files always live under `work/`.
+fn film_relative(film_dir: &Path, audio: &str) -> String {
+    let path = Path::new(audio);
+    if path.is_relative() {
+        return audio.to_string();
+    }
+    let film = std::fs::canonicalize(film_dir).unwrap_or_else(|_| film_dir.to_path_buf());
+    if let Ok(rest) = path
+        .strip_prefix(&film)
+        .or_else(|_| path.strip_prefix(film_dir))
+    {
+        return rest.to_string_lossy().replace('\\', "/");
+    }
+    let parts: Vec<_> = path.components().collect();
+    match parts.iter().rposition(|c| c.as_os_str() == "work") {
+        Some(i) => parts
+            .get(i..)
+            .unwrap_or_default()
+            .iter()
+            .map(|c| c.as_os_str().to_string_lossy())
+            .collect::<Vec<_>>()
+            .join("/"),
+        None => audio.to_string(),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::film_relative;
+    use std::path::Path;
+
+    #[test]
+    fn voice_paths_become_relative_to_the_film() {
+        let film = Path::new("/nowhere/demo.explainrig/film");
+        assert_eq!(
+            film_relative(
+                film,
+                "/nowhere/demo.explainrig/film/work/voice/intro-01.wav"
+            ),
+            "work/voice/intro-01.wav"
+        );
+        assert_eq!(
+            film_relative(film, "/srv/worker/inputs/job-7/film/work/voice/a.wav"),
+            "work/voice/a.wav"
+        );
+        assert_eq!(film_relative(film, "work/voice/a.wav"), "work/voice/a.wav");
+    }
 }

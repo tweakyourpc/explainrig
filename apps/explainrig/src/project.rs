@@ -96,7 +96,7 @@ pub fn timing(dir: &Path, p: &Project) -> Timing {
         .ok()
         .and_then(|t| serde_json::from_str::<SavedTiming>(&t).ok())
         .filter(|s| s.key == lines_key(p))
-        .map(|s| s.timing)
+        .map(|s| s.timing.relative_audio(&film_dir(dir)))
         .unwrap_or_else(|| Timing::estimate(p))
 }
 
