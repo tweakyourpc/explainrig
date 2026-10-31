@@ -1,0 +1,564 @@
+{
+  "explainrig": 1,
+  "title": "Explainrig",
+  "source": {
+    "path": "/home/chris/Projects/explainrig/README.md",
+    "hash": "5ee11c4e5cddd7e5"
+  },
+  "doc_type": "procedure",
+  "scores": [
+    {
+      "doc_type": "procedure",
+      "score": 10,
+      "reasons": [
+        "4 numbered item(s)",
+        "3 numbered item(s) start with an instruction"
+      ]
+    },
+    {
+      "doc_type": "reference",
+      "score": 4,
+      "reasons": [
+        "the fallback when nothing else is clear"
+      ]
+    },
+    {
+      "doc_type": "change-notice",
+      "score": 0,
+      "reasons": []
+    },
+    {
+      "doc_type": "faq",
+      "score": 0,
+      "reasons": []
+    }
+  ],
+  "style": {
+    "accent": "#f39200",
+    "background": "#14213d",
+    "voice": "af_heart",
+    "music": "calm"
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "kind": "intro",
+      "layout": "title",
+      "title": "Explainrig",
+      "subtitle": "Documentation in, explainer video out",
+      "heading": "",
+      "lines": [
+        {
+          "text": "Explainrig turns your documentation into an explainer video, offline, with no AI writing the script.",
+          "draft": false
+        }
+      ],
+      "points": [],
+      "highlights": [],
+      "source": [],
+      "why": [
+        "every film opens on its title; this one reads as a procedure"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "before-you-start",
+      "kind": "segment",
+      "layout": "screenshot",
+      "title": "How it works",
+      "subtitle": "",
+      "heading": "How it works",
+      "lines": [
+        {
+          "text": "Open a Word or Markdown document, and Explainrig makes a best guess at the video: the scenes, the layouts, and a first draft of the narration.",
+          "draft": false
+        },
+        {
+          "text": "You check every scene, fix what the guess got wrong, and approve it.",
+          "draft": true
+        },
+        {
+          "text": "Then Showrig renders the video right on your own computer.",
+          "draft": false
+        }
+      ],
+      "points": [
+        {
+          "head": "A best guess, made by rules",
+          "sub": "Scenes, layouts and draft narration",
+          "tone": "ok",
+          "line": 0
+        },
+        {
+          "head": "You review and approve",
+          "sub": "Every rules-written line is marked as a draft",
+          "tone": "info",
+          "line": 1
+        },
+        {
+          "head": "Rendered offline by Showrig",
+          "sub": "Nothing is uploaded",
+          "tone": "ok",
+          "line": 2
+        }
+      ],
+      "image": "image1",
+      "highlights": [
+        {
+          "x": 6,
+          "y": 60,
+          "w": 258,
+          "h": 372,
+          "line": 0,
+          "click": false
+        },
+        {
+          "x": 276,
+          "y": 200,
+          "w": 748,
+          "h": 84,
+          "line": 1,
+          "click": false
+        },
+        {
+          "x": 910,
+          "y": 64,
+          "w": 114,
+          "h": 24,
+          "line": 1,
+          "click": true
+        },
+        {
+          "x": 1094,
+          "y": 30,
+          "w": 262,
+          "h": 22,
+          "line": 2,
+          "click": false
+        }
+      ],
+      "source": [
+        1,
+        3,
+        4
+      ],
+      "why": [
+        "text before the first step; key points",
+        "shows the picture before the steps (image1)"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "step1",
+      "kind": "segment",
+      "layout": "steps",
+      "title": "1. Open your document",
+      "subtitle": "",
+      "heading": "Open your document",
+      "lines": [
+        {
+          "text": "Open your document.",
+          "draft": true
+        },
+        {
+          "text": "Drop a Word or Markdown file on the window, or type its path and press Open.",
+          "draft": false
+        }
+      ],
+      "points": [
+        {
+          "head": "Open your document",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        },
+        {
+          "head": "Review each scene",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        },
+        {
+          "head": "Press Prepare, then Preview",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        },
+        {
+          "head": "Press Render once every scene is approved",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        }
+      ],
+      "highlights": [],
+      "focus": 0,
+      "source": [
+        6
+      ],
+      "why": [
+        "step 1 without a picture: shown in the list of all steps"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "step2",
+      "kind": "segment",
+      "layout": "screenshot",
+      "title": "2. Review each scene",
+      "subtitle": "",
+      "heading": "Review each scene, then approve it",
+      "lines": [
+        {
+          "text": "Next, review each scene.",
+          "draft": false
+        },
+        {
+          "text": "Rewrite the draft narration, pick a layout, and drag on a screenshot to highlight what matters.",
+          "draft": true
+        },
+        {
+          "text": "Then approve the scene.",
+          "draft": true
+        }
+      ],
+      "points": [
+        {
+          "head": "Rewrite the drafts",
+          "sub": "Your words replace the rules' words",
+          "tone": "warn",
+          "line": 1
+        },
+        {
+          "head": "Draw highlights",
+          "sub": "Drag on the picture; each box appears with its line",
+          "tone": "info",
+          "line": 1
+        },
+        {
+          "head": "Approve the scene",
+          "sub": "Render waits until every scene is approved",
+          "tone": "ok",
+          "line": 2
+        }
+      ],
+      "image": "image2",
+      "highlights": [
+        {
+          "x": 276,
+          "y": 214,
+          "w": 748,
+          "h": 72,
+          "line": 1,
+          "click": false
+        },
+        {
+          "x": 276,
+          "y": 486,
+          "w": 428,
+          "h": 256,
+          "line": 1,
+          "click": false
+        },
+        {
+          "x": 910,
+          "y": 64,
+          "w": 114,
+          "h": 24,
+          "line": 2,
+          "click": true
+        }
+      ],
+      "source": [
+        7,
+        8
+      ],
+      "why": [
+        "step 2 with a picture (image2)"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "step3",
+      "kind": "segment",
+      "layout": "screenshot",
+      "title": "3. Prepare and preview",
+      "subtitle": "",
+      "heading": "Prepare, then preview",
+      "lines": [
+        {
+          "text": "Press Prepare, then Preview.",
+          "draft": true
+        },
+        {
+          "text": "Showrig records the voice and measures every line.",
+          "draft": false
+        },
+        {
+          "text": "The preview plays your film as a timed slideshow in your browser.",
+          "draft": false
+        }
+      ],
+      "points": [
+        {
+          "head": "Prepare",
+          "sub": "Showrig records the voice and measures every line",
+          "tone": "info",
+          "line": 1
+        },
+        {
+          "head": "Preview",
+          "sub": "A timed slideshow in your browser",
+          "tone": "ok",
+          "line": 2
+        }
+      ],
+      "image": "image3",
+      "highlights": [
+        {
+          "x": 18,
+          "y": 734,
+          "w": 1004,
+          "h": 58,
+          "line": 2,
+          "click": false
+        },
+        {
+          "x": 18,
+          "y": 690,
+          "w": 64,
+          "h": 34,
+          "line": 2,
+          "click": true
+        }
+      ],
+      "source": [
+        9,
+        10
+      ],
+      "why": [
+        "step 3 with a picture (image3)"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "step4",
+      "kind": "segment",
+      "layout": "steps",
+      "title": "4. Render",
+      "subtitle": "",
+      "heading": "Press Render once every scene is approved",
+      "lines": [
+        {
+          "text": "Press Render once every scene is approved.",
+          "draft": true
+        },
+        {
+          "text": "Showrig builds the final video, and Explainrig tells you where it is.",
+          "draft": true
+        }
+      ],
+      "points": [
+        {
+          "head": "Open your document",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        },
+        {
+          "head": "Review each scene",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        },
+        {
+          "head": "Press Prepare, then Preview",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        },
+        {
+          "head": "Press Render once every scene is approved",
+          "sub": "",
+          "tone": "info",
+          "line": 0
+        }
+      ],
+      "highlights": [],
+      "focus": 3,
+      "source": [
+        11
+      ],
+      "why": [
+        "step 4 without a picture: shown in the list of all steps"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "checklist",
+      "kind": "segment",
+      "layout": "checklist",
+      "title": "Checklist",
+      "subtitle": "",
+      "heading": "Before you finish",
+      "lines": [
+        {
+          "text": "To recap: open your document, review and approve each scene, prepare and preview, then render.",
+          "draft": false
+        }
+      ],
+      "points": [
+        {
+          "head": "Open your document",
+          "sub": "",
+          "tone": "ok",
+          "line": 0
+        },
+        {
+          "head": "Review and approve each scene",
+          "sub": "",
+          "tone": "ok",
+          "line": 0
+        },
+        {
+          "head": "Prepare and preview",
+          "sub": "",
+          "tone": "ok",
+          "line": 0
+        },
+        {
+          "head": "Render",
+          "sub": "",
+          "tone": "ok",
+          "line": 0
+        }
+      ],
+      "highlights": [],
+      "source": [
+        6,
+        7,
+        9,
+        11
+      ],
+      "why": [
+        "4 steps: a checklist recaps them"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "outro",
+      "kind": "outro",
+      "layout": "title",
+      "title": "Make your first explainer",
+      "subtitle": "explainrig doctor, then open a document",
+      "heading": "",
+      "lines": [
+        {
+          "text": "Run explainrig doctor, open a document, and make your first explainer.",
+          "draft": false
+        }
+      ],
+      "points": [],
+      "highlights": [],
+      "source": [],
+      "why": [
+        "no single call to action found"
+      ],
+      "status": "approved"
+    }
+  ],
+  "dropped": [
+    {
+      "name": "What you need",
+      "text": "What you need Showrig 0.3 with its capture and voice setup. Explainrig checks for it and tells you what is missing. It never installs anything itself. Linux. Other platforms come later. Run explainrig doctor to see what is ready.",
+      "why": "reference material after the steps; restore it to explain it too",
+      "source": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "name": "How the guess works",
+      "text": "How the guess works Sections come from headings. When a document has none, bold list items and bold lines such as \"Background:\" mark them instead. The document type is scored from what is in it: dates and change words for a change notice, numbered instructions for a procedure, questions for an FAQ. The Why panel shows the scores. Each type has a recipe. A change notice gets a timeline, one scene per group of readers, and a call to action. A procedure gets one scene per step and a checklist. Narration drafts are the document's own sentences, rewritten into the second person (\"Users with X are already set up\" becomes \"If you already use X, you're all set\"). Pronunciations spell out acronyms, read web addresses with \"dot\", and expand short month names. You can change any of them. Left-out sections such as Background and Purpose wait in the Dropped panel, ready to restore.",
+      "why": "reference material after the steps; restore it to explain it too",
+      "source": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "name": "Commands",
+      "text": "Commands Everything the window does is also a command. explainrig help lists them all: explainrig [DOC|PROJECT]        open the review window\nexplainrig doctor               check Showrig and its capture and voice setup\nexplainrig import DOC           make a project from the rules' best guess\nexplainrig show PROJECT         the storyboard as text\nexplainrig approve PROJECT      approve scenes (--all for every scene)\nexplainrig prepare PROJECT      voice and exact timings, then a timed preview\nexplainrig render PROJECT       the final video\nexplainrig auto DOC             import, approve, prepare and render in one go Build commands come from ~/.config/explainrig/config.json, so a machine that renders on another computer only needs different commands. contrib/srw-runner.sh is an example that renders on a Showrig worker over SSH.",
+      "why": "reference material after the steps; restore it to explain it too",
+      "source": [
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "name": "A project folder",
+      "text": "A project folder NAME.explainrig/\n  explainrig.json   the storyboard, your edits and approvals\n  img/              pictures taken from the document\n  timing.json       measured line times from the last prepare\n  film/             the Showrig film folder, with preview.html",
+      "why": "reference material after the steps; restore it to explain it too",
+      "source": [
+        27,
+        28
+      ]
+    },
+    {
+      "name": "Building",
+      "text": "Building Explainrig is a Rust workspace. Build it with cargo build --release; the program is target/release/explainrig. Crate · Job · crates/doc · reads .docx and Markdown into ordered blocks · crates/guess · the rules: sections, document type, recipes, drafts, pronunciations · crates/film · writes the Showrig storyboard, the animated pages and the preview · crates/runner · checks prerequisites and runs Showrig · apps/explainrig · the window and the commands The test documents in tests/fixtures are made by tests/fixtures/make_fixtures.py.",
+      "why": "reference material after the steps; restore it to explain it too",
+      "source": [
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "name": "License",
+      "text": "License MIT. Copyright (c) 2026 Christopher Davis.",
+      "why": "reference material after the steps; restore it to explain it too",
+      "source": [
+        33,
+        34
+      ]
+    }
+  ],
+  "images": [
+    {
+      "id": "image1",
+      "file": "img/image1.png",
+      "width": 1360,
+      "height": 860,
+      "alt": "The Explainrig review window"
+    },
+    {
+      "id": "image2",
+      "file": "img/image2.png",
+      "width": 1360,
+      "height": 860,
+      "alt": "Editing a screenshot scene"
+    },
+    {
+      "id": "image3",
+      "file": "img/image3.png",
+      "width": 1040,
+      "height": 900,
+      "alt": "The timed preview"
+    }
+  ],
+  "say": {
+    "Explainrig": "Explain rig",
+    "explainrig": "explain rig"
+  }
+}

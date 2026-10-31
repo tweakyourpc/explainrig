@@ -1,0 +1,15 @@
+[package]
+name = "explainrig-film"
+description = "Explainrig film writer: a Showrig film folder (storyboard, animated pages, preview) from a project"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+explainrig-guess = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true, features = ["preserve_order"] }

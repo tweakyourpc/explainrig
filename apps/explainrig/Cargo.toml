@@ -1,0 +1,20 @@
+[package]
+name = "explainrig"
+description = "Explainrig: documentation in, explainer video out (rendered by Showrig)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+explainrig-doc = { workspace = true }
+explainrig-guess = { workspace = true }
+explainrig-film = { workspace = true }
+explainrig-runner = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+eframe = { workspace = true }
+image = { workspace = true }

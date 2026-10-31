@@ -1,0 +1,18 @@
+[package]
+name = "explainrig-guess"
+description = "Explainrig rules: sections, document type, scene recipes, narration drafts, pronunciations"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+explainrig-doc = { workspace = true }
+serde = { workspace = true }
+regex = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

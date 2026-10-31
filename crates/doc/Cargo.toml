@@ -1,0 +1,19 @@
+[package]
+name = "explainrig-doc"
+description = "Explainrig ingest: Word .docx and Markdown into one ordered block list"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+quick-xml = { workspace = true }
+zip = { workspace = true }
+pulldown-cmark = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

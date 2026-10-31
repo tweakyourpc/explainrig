@@ -1,0 +1,46 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "apps/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+rust-version = "1.90"
+
+[workspace.dependencies]
+explainrig-doc = { path = "crates/doc" }
+explainrig-guess = { path = "crates/guess" }
+explainrig-film = { path = "crates/film" }
+explainrig-runner = { path = "crates/runner" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = { version = "1", default-features = false, features = ["std", "unicode-perl", "unicode-case", "perf"] }
+quick-xml = "0.41"
+zip = { version = "3", default-features = false, features = ["deflate"] }
+pulldown-cmark = { version = "0.13", default-features = false }
+eframe = { version = "0.36", default-features = false, features = ["default_fonts", "glow", "wayland", "x11"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+unreachable = "deny"
+indexing_slicing = "warn"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+strip = true
+
+[profile.dev]
+debug = "limited"
+
+[profile.dev.package."*"]
+debug = false
